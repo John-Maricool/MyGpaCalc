@@ -1,0 +1,31 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="Texts">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:ems">5</item>
+        <item name="android:layout_margin">20dp</item>
+        <item name="android:hint">course</item>
+
+    </style>
+
+    <style name="TextUL">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:ems">2</item>
+        <item name="android:layout_margin">20dp</item>
+        <item name="android:hint">ul</item>
+    </style>
+
+    <style name="spinner_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">20dp</item>
+
+    </style>
+</resources>

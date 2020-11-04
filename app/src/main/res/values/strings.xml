@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">MyGpaCalc</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title">WELCOME TO MY GPA CALCULATOR APP</string>
+    <string name="totUl">Enter total unit load of courses</string>
+
+    <string-array name="grades">
+        <item>Gr</item>
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+        <item>D</item>
+        <item>E</item>
+        <item>F</item>
+    </string-array>
+
+
+    <string-array name="ul">
+        <item>UL</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>120</item>
+    </string-array>
+
+    <string name="title_activity_show_gp">ShowGP</string>
+    <string name="Entry_Point">Enter the total unit load of courses</string>
+    <string name="enter_courses">Enter courses</string>
+    <string name="enter_unit_loads">Enter unit loads</string>
+    <string name="calc_gpa">CALC. GPA</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>
