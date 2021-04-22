@@ -70,15 +70,15 @@ public class MainActivity extends AppCompatActivity {
     public boolean AddViews(){
         LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
                 LinearLayout.LayoutParams.WRAP_CONTENT,
-                LinearLayout.LayoutParams.WRAP_CONTENT
+                70
         );
-        params.setMargins(0, 30, 0, 0);
+       params.setMargins(0, 30, 0, 0);
 
         EditText editText = new EditText(this);
         editText.setLayoutParams(params);
         editText.setEms(5);
         editText.setBackground(getResources().getDrawable(R.drawable.rounded_corners));
-        editText.setTextSize(13);
+        editText.setTextSize(16);
         editText.setHint("course");
         course_layout.addView(editText);
 
@@ -88,19 +88,19 @@ public class MainActivity extends AppCompatActivity {
         unitLoads.setBackground(getResources().getDrawable(R.drawable.rounded_corners));
         unitLoads.setInputType(InputType.TYPE_CLASS_NUMBER);
         unitLoads.setHint("ul");
-        unitLoads.setTextSize(13);
-       // unitLoads.setPadding(6, 0, 6, 0);
+        unitLoads.setTextSize(16);
         ul_layout.addView(unitLoads);
 
         Spinner spinner = new Spinner(this);
         LinearLayout.LayoutParams param = new LinearLayout.LayoutParams(
                 LinearLayout.LayoutParams.WRAP_CONTENT,
-                LinearLayout.LayoutParams.WRAP_CONTENT
+                70
         );
-        param.setMargins(0, 0, 0, 10);
+        param.setMargins(0, 30, 0, 0);
         spinner.setLayoutParams(param);
         spinner.setBackground(getResources().getDrawable(R.drawable.rounded_corners));
-        spinner.setPadding(-10, -10, -10 , -10);
+        spinner.setDropDownWidth(5);
+        //spinner.setPadding(-10, -10, -10 , -10);
         spinner.setPopupBackgroundDrawable(getResources().getDrawable(R.drawable.rounded_corners));
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.grades, android.R.layout.simple_spinner_dropdown_item);
        // adapter.setDropDownViewResource(R.layout.each_view);
