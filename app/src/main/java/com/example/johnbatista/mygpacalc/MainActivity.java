@@ -1,35 +1,22 @@
 package com.example.johnbatista.mygpacalc;
 
-import android.app.Activity;
-import android.content.Context;
-import android.content.DialogInterface;
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.RequiresApi;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.text.InputType;
-import android.view.ContextThemeWrapper;
-import android.view.Gravity;
-import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
-import android.widget.Switch;
-import android.widget.TextView;
 import android.widget.Toast;
-import java.util.ArrayList;
 
 
 public class MainActivity extends AppCompatActivity {
-
 
     LinearLayout spinner_layout, course_layout, ul_layout;
     Button calc;
@@ -67,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
-    public boolean AddViews(){
+    public void AddViews(){
         LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
                 LinearLayout.LayoutParams.WRAP_CONTENT,
                 70
@@ -99,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
         param.setMargins(0, 30, 0, 0);
         spinner.setLayoutParams(param);
         spinner.setBackground(getResources().getDrawable(R.drawable.rounded_corners));
-        spinner.setDropDownWidth(5);
+       // spinner.setDropDownWidth(5);
         //spinner.setPadding(-10, -10, -10 , -10);
         spinner.setPopupBackgroundDrawable(getResources().getDrawable(R.drawable.rounded_corners));
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.grades, android.R.layout.simple_spinner_dropdown_item);
@@ -107,7 +94,6 @@ public class MainActivity extends AppCompatActivity {
         spinner.setAdapter(adapter);
         spinner_layout.addView(spinner);
 
-        return true;
     }
 
     public void calc(View view) {
@@ -123,7 +109,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     GPA = Mult / TotUL;
-    String GPa = String.format("%.4f", GPA);
+    @SuppressLint("DefaultLocale") String GPa = String.format ("%.4f", GPA);
     Intent intent = new Intent(this, ShowGP.class);
     intent.putExtra("GPA", GPa);
     startActivity(intent);
