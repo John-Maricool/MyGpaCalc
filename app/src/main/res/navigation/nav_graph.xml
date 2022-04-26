@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/introFragment">
+
+    <fragment
+        android:id="@+id/calcGpFragment"
+        android:name="com.example.johnbatista.mygpacalc.ui.calc_gp.CalcGpFragment"
+        android:label="All Courses"
+        tools:layout="@layout/fragment_calc_gp">
+        <action
+            android:id="@+id/action_calcGpFragment_to_showGPFragment"
+            app:destination="@id/showGPFragment" />
+        <argument
+            android:name="details"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_calcGpFragment_to_addCourseFragment"
+            app:destination="@id/addCourseFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/showGPFragment"
+        android:name="com.example.johnbatista.mygpacalc.ui.show_gp.ShowGPFragment"
+        android:label="Result"
+        tools:layout="@layout/fragment_show_gp">
+        <argument
+            android:name="result"
+            app:argType="com.example.johnbatista.mygpacalc.data.models.GpResultModel" />
+    </dialog>
+    <dialog
+        android:id="@+id/firstScreenFragment"
+        android:name="com.example.johnbatista.mygpacalc.ui.create_gp.FirstScreenFragment"
+        android:label="Input">
+        <action
+            android:id="@+id/action_firstScreenFragment_to_calcGpFragment"
+            app:destination="@id/calcGpFragment" />
+    </dialog>
+    <fragment
+        android:id="@+id/addCourseFragment"
+        android:name="com.example.johnbatista.mygpacalc.ui.add_course.AddCourseFragment"
+        android:label="Add Details">
+        <argument
+            android:name="details"
+            app:argType="string" />
+        <argument
+            android:name="course"
+            app:argType="com.example.johnbatista.mygpacalc.data.models.Course"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_addCourseFragment_to_calcGpFragment"
+            app:destination="@id/calcGpFragment"
+            app:popUpTo="@id/calcGpFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/previousGpsFragment"
+        android:name="com.example.johnbatista.mygpacalc.ui.previous_gps.PreviousGpsFragment"
+        android:label="Saved Results"
+        tools:layout="@layout/previous_gps_fragment">
+        <action
+            android:id="@+id/action_previousGpsFragment_to_calcGpFragment"
+            app:destination="@id/calcGpFragment" />
+        <action
+            android:id="@+id/action_previousGpsFragment_to_introFragment"
+            app:destination="@id/introFragment"
+            app:popUpTo="@id/introFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/introFragment"
+        android:name="com.example.johnbatista.mygpacalc.ui.first_screen.IntroFragment"
+        android:label="Grade Point Calculator">
+        <action
+            android:id="@+id/action_introFragment_to_previousGpsFragment"
+            app:destination="@id/previousGpsFragment"
+            app:popUpTo="@id/previousGpsFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>

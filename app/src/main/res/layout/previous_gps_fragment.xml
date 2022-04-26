@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.johnbatista.mygpacalc.ui.previous_gps.PreviousGpsViewModel" />
+
+        <variable
+            name="adapter"
+            type="com.example.johnbatista.mygpacalc.data.adapter.PreviousGpListAdapter" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.previous_gps.PreviousGpsFragment">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:init_gp_prev_list_recycler="@{adapter}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:set_prev_gp_list_item="@{viewModel.result}"
+            tools:listitem="@layout/previous_gp_list_item" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,122 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.johnbatista.mygpacalc.ui.calc_gp.CalcGpViewModel" />
+
+        <variable
+            name="adapter"
+            type="com.example.johnbatista.mygpacalc.data.adapter.CoursesListAdapter" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="3dp"
+        tools:context=".ui.calc_gp.CalcGpFragment">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/course"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="@string/course"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toStartOf="@+id/load"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/load"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/load"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@+id/course"
+            app:layout_constraintEnd_toStartOf="@+id/grade"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/course"
+            app:layout_constraintTop_toTopOf="@+id/course" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/grade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_marginStart="56dp"
+            android:text="@string/grade"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@+id/load"
+            app:layout_constraintEnd_toStartOf="@+id/gade_unit"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/load"
+            app:layout_constraintTop_toTopOf="@+id/load" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/gade_unit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="@string/grade_unit"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@+id/grade"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/grade"
+            app:layout_constraintTop_toTopOf="@+id/grade" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="16dp"
+            app:init_gp_list_recycler="@{adapter}"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/calculate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/course"
+            app:set_courses_list_item="@{viewModel.gps}"
+            tools:listitem="@layout/gp_courses_list_item" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/calculate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_corners"
+            android:padding="4dp"
+            android:onClick="@{() -> viewModel.calculate()}"
+            android:text="@string/calculate"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="24dp"
+            android:background="@color/fab_background"
+            android:backgroundTint="@color/fab_background"
+            android:contentDescription="img"
+            android:onClick="@{() -> viewModel.addCourse()}"
+            android:src="@drawable/ic_add"
+            app:elevation="3dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:rippleColor="@color/ripple" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

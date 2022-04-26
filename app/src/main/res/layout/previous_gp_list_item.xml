@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="listener"
+            type="com.example.johnbatista.mygpacalc.data.interfaces.OnItemClickListener" />
+
+        <variable
+            name="gpResult"
+            type="com.example.johnbatista.mygpacalc.data.models.GpResultModel" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:onLongClick="@{() -> listener.onItemLongClick(gpResult.name)}"
+        android:onClick="@{() -> listener.onItemClick(gpResult.name)}"
+        app:cardBackgroundColor="@color/fab_background"
+        app:cardCornerRadius="5dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/details"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_marginEnd="8dp"
+                android:text="@{gpResult.name}"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/gp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="First Semester/100L" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/gp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/details"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/details"
+                android:text="@{gpResult.gp}"
+                tools:text="3.56" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tot_courses"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_marginEnd="8dp"
+                android:text="@string/number_of_courses"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toStartOf="@+id/gp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/details" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/courses_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@+id/tot_courses"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tot_courses"
+                app:set_course_text="@{gpResult.numOfCourses}"
+                tools:text="3" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tot_ul"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_marginEnd="8dp"
+                android:text="@string/nuber_of_unit_loads"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toStartOf="@+id/ul_no"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tot_courses" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/ul_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@+id/tot_ul"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tot_ul"
+                app:set_course_text="@{gpResult.totalUl}"
+                tools:text="3" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

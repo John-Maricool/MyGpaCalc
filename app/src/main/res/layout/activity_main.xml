@@ -1,63 +1,31 @@
-<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:padding="16dp"
-    android:layout_centerHorizontal="true"
-    android:shrinkColumns="1"
-    android:stretchColumns="1"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".ui.MainActivity">
 
-        <TableRow>
-        <LinearLayout
-            android:id="@+id/course_layout"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:orientation="vertical"/>
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/fab_background"
+        android:elevation="10dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-
-        <LinearLayout
-            android:id="@+id/ul_layout"
-            android:layout_width="wrap_content"
-            android:gravity="center_horizontal"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" />
-
-
-        <LinearLayout
-            android:id="@+id/spinner_layout"
-            android:gravity="center_horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" />
-
-        </TableRow>
-
-    <TableRow
-        android:layout_width="265dp"
-        android:layout_height="wrap_content">
-
-        <Button
-            android:id="@+id/add"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="Add"
-            android:text="ADD" />
-
-        <Button
-            android:id="@+id/calc"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:onClick="calc"
-            android:text="CALCULATE" />
-
-        <Button
-            android:id="@+id/button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="Remove"
-            android:text="REMOVE" />
-    </TableRow>
-</TableLayout>
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/nav_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:defaultNavHost="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:navGraph="@navigation/nav_graph" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/MyGpaCalc.iml" filepath="$PROJECT_DIR$/MyGpaCalc.iml" group="MyGpaCalc" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="MyGpaCalc/app" />
+      <module fileurl="file://$PROJECT_DIR$/MyGpaCalc.iml" filepath="$PROJECT_DIR$/MyGpaCalc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/MyGpaCalc.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/MyGpaCalc.app.iml" />
     </modules>
   </component>
 </project>

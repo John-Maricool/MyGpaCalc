@@ -8,7 +8,6 @@
     <string name="totUl">Enter total unit load of courses</string>
 
     <string-array name="grades">
-        <item>Gr</item>
         <item>A</item>
         <item>B</item>
         <item>C</item>
@@ -19,7 +18,6 @@
 
 
     <string-array name="ul">
-        <item>UL</item>
         <item>1</item>
         <item>2</item>
         <item>3</item>
@@ -49,5 +47,25 @@
     <string name="calc_gpa">CALC. GPA</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="calculate">CALCULATE</string>
+    <string name="remove">REMOVE</string>
+    <string name="add">ADD</string>
+    <string name="save">SAVE</string>
+    <string name="your_gpa">Your Grade Point is:</string>
+    <string name="welcome_to_gp_calc">Grade Point Calculator</string>
+    <string name="enter_name_level_semester">Enter details (level/semester)</string>
+    <string name="start">START</string>
+    <string name="view_previous_ones">View Previous Ones</string>
+    <string name="load">Load</string>
+    <string name="course">Course</string>
+    <string name="grade">Grade</string>
+    <string name="grade_unit">Grade Unit</string>
+    <string name="number_of_courses">Number of Courses</string>
+    <string name="nuber_of_unit_loads">Total Unit Loads</string>
+    <string name="previously_saved_gps">Previously Saved GPs</string>
+    <string name="calc_new">Calculate New</string>
+    <string name="create_new">Create New</string>
+    <string name="delete_all">Delete All</string>
+    <string name="about">About</string>
 
 </resources>
