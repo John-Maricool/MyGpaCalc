@@ -4,4 +4,7 @@
     <color name="ripple">#60EB2D</color>
     <color name="fab_background">#174E08</color>
     <color name="black">#000000</color>
+    <color name="colorPrimary">#385A1B</color>
+    <color name="colorPrimaryDark">#30692C</color>
+    <color name="colorAccent">#119B0D</color>
 </resources>

@@ -1,9 +1,19 @@
 
-F
-app/proguard-rules.pro,9\e\9e08934d811afe28fbc77aaa3c0d747b94348db9
-Å
-Qapp/src/main/java/com/example/johnbatista/mygpacalc/local_db/ResultWithCourses.kt,b\f\bfe202d5f6df8a3b9108f439430787e03e39e4d5
-x
-Happ/src/main/java/com/example/johnbatista/mygpacalc/local_db/GpResult.kt,b\0\b0f530c43217d01bbeecfaa29b9be9de04d1bb95
-å
-\app/src/main/java/com/example/johnbatista/mygpacalc/data/repository/FirstScreenRepository.kt,8\b\8be741b341ba160cb00a324da8066eb061fd5a27
+Ä
+Papp/src/main/java/com/example/johnbatista/mygpacalc/ui/calc_gp/CalcGpFragment.kt,4\4\446de9ec5c8050b781b7567abcd9e2ee008d9a4f
+ã
+[app/src/main/java/com/example/johnbatista/mygpacalc/ui/previous_gps/PreviousGpsViewModel.kt,4\2\423ea055351f2a136fb77b915734ae198e3c47aa
+}
+Mapp/src/main/java/com/example/johnbatista/mygpacalc/utils/BindingFunctions.kt,4\0\400fab72edda29c3fa09418da70b719616021bbd
+ä
+Zapp/src/main/java/com/example/johnbatista/mygpacalc/ui/previous_gps/PreviousGpsFragment.kt,1\b\1b53956937ca13456d37281ef76c9cafc4734edf
+y
+Iapp/src/main/java/com/example/johnbatista/mygpacalc/utils/Calculations.kt,a\0\a0d6ea0f117b587204eba3eb012d0142f07d8b50
+v
+Fapp/src/main/java/com/example/johnbatista/mygpacalc/ui/MainActivity.kt,3\0\3005012af6a8410dbb8d76dc6d919d3fc8067418
+Ö
+Uapp/src/main/java/com/example/johnbatista/mygpacalc/ui/first_screen/IntroViewModel.kt,2\e\2e6d468777656390cf55e139e882a401ef3c4470
+Ü
+Vapp/src/main/java/com/example/johnbatista/mygpacalc/ui/add_course/AddCourseFragment.kt,1\5\15be395ce0a488e78da5f7b999ee53517927ee81
+Ñ
+Tapp/src/main/java/com/example/johnbatista/mygpacalc/ui/first_screen/IntroFragment.kt,4\b\4ba512f0878fab35363af4dc9342b742ea3d3af1

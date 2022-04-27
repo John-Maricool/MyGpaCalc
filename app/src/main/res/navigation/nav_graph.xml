@@ -7,75 +7,109 @@
 
     <fragment
         android:id="@+id/calcGpFragment"
-        android:name="com.example.johnbatista.mygpacalc.ui.calc_gp.CalcGpFragment"
+        android:name="com.maricool.johnbatista.mygpacalc.ui.calc_gp.CalcGpFragment"
         android:label="All Courses"
         tools:layout="@layout/fragment_calc_gp">
         <action
             android:id="@+id/action_calcGpFragment_to_showGPFragment"
-            app:destination="@id/showGPFragment" />
+            app:destination="@id/showGPFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left" />
         <argument
             android:name="details"
             app:argType="string" />
         <action
             android:id="@+id/action_calcGpFragment_to_addCourseFragment"
-            app:destination="@id/addCourseFragment" />
+            app:destination="@id/addCourseFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left" />
     </fragment>
     <dialog
         android:id="@+id/showGPFragment"
-        android:name="com.example.johnbatista.mygpacalc.ui.show_gp.ShowGPFragment"
+        android:name="com.maricool.johnbatista.mygpacalc.ui.show_gp.ShowGPFragment"
         android:label="Result"
         tools:layout="@layout/fragment_show_gp">
         <argument
             android:name="result"
-            app:argType="com.example.johnbatista.mygpacalc.data.models.GpResultModel" />
+            app:argType="com.maricool.johnbatista.mygpacalc.data.models.GpResultModel" />
     </dialog>
     <dialog
         android:id="@+id/firstScreenFragment"
-        android:name="com.example.johnbatista.mygpacalc.ui.create_gp.FirstScreenFragment"
+        android:name="com.maricool.johnbatista.mygpacalc.ui.create_gp.FirstScreenFragment"
         android:label="Input">
         <action
             android:id="@+id/action_firstScreenFragment_to_calcGpFragment"
-            app:destination="@id/calcGpFragment" />
+            app:destination="@id/calcGpFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left" />
     </dialog>
     <fragment
         android:id="@+id/addCourseFragment"
-        android:name="com.example.johnbatista.mygpacalc.ui.add_course.AddCourseFragment"
+        android:name="com.maricool.johnbatista.mygpacalc.ui.add_course.AddCourseFragment"
         android:label="Add Details">
         <argument
             android:name="details"
             app:argType="string" />
         <argument
             android:name="course"
-            app:argType="com.example.johnbatista.mygpacalc.data.models.Course"
+            app:argType="com.maricool.johnbatista.mygpacalc.data.models.Course"
             app:nullable="true" />
         <action
             android:id="@+id/action_addCourseFragment_to_calcGpFragment"
             app:destination="@id/calcGpFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
             app:popUpTo="@id/calcGpFragment"
             app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/previousGpsFragment"
-        android:name="com.example.johnbatista.mygpacalc.ui.previous_gps.PreviousGpsFragment"
+        android:name="com.maricool.johnbatista.mygpacalc.ui.previous_gps.PreviousGpsFragment"
         android:label="Saved Results"
         tools:layout="@layout/previous_gps_fragment">
         <action
             android:id="@+id/action_previousGpsFragment_to_calcGpFragment"
-            app:destination="@id/calcGpFragment" />
+            app:destination="@id/calcGpFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popUpToInclusive="false" />
         <action
             android:id="@+id/action_previousGpsFragment_to_introFragment"
             app:destination="@id/introFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
             app:popUpTo="@id/introFragment"
             app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/introFragment"
-        android:name="com.example.johnbatista.mygpacalc.ui.first_screen.IntroFragment"
+        android:name="com.maricool.johnbatista.mygpacalc.ui.first_screen.IntroFragment"
         android:label="Grade Point Calculator">
         <action
             android:id="@+id/action_introFragment_to_previousGpsFragment"
             app:destination="@id/previousGpsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
             app:popUpTo="@id/previousGpsFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_introFragment_to_aboutFragment"
+            app:destination="@id/aboutFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popUpTo="@id/aboutFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.maricool.johnbatista.mygpacalc.ui.about.AboutFragment"
+        android:label="About" >
+        <action
+            android:id="@+id/action_aboutFragment_to_introFragment"
+            app:destination="@id/introFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popUpTo="@id/introFragment"
             app:popUpToInclusive="true" />
     </fragment>
 </navigation>

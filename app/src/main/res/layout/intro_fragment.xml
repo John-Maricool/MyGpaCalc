@@ -7,7 +7,7 @@
 
         <variable
             name="viewModel"
-            type="com.example.johnbatista.mygpacalc.ui.first_screen.IntroViewModel" />
+            type="com.maricool.johnbatista.mygpacalc.ui.first_screen.IntroViewModel" />
 
     </data>
 
@@ -38,6 +38,7 @@
             android:elevation="3dp"
             android:onClick="@{() -> viewModel.start()}"
             android:text="@string/start"
+            android:textAllCaps="false"
             android:textColor="@color/white"
             app:layout_constraintBottom_toTopOf="@+id/previoud"
             app:layout_constraintEnd_toEndOf="parent"
@@ -56,6 +57,7 @@
             android:onClick="@{() -> viewModel.previous()}"
             android:padding="3dp"
             android:text="@string/view_previous_ones"
+            android:textAllCaps="false"
             android:textColor="@color/white"
             app:layout_constraintBottom_toTopOf="@+id/about"
             app:layout_constraintEnd_toEndOf="@+id/start"
@@ -69,8 +71,10 @@
             android:layout_height="wrap_content"
             android:background="@drawable/rounded_corners"
             android:elevation="3dp"
+            android:onClick="@{() -> viewModel.about()}"
             android:padding="3dp"
             android:text="@string/about"
+            android:textAllCaps="false"
             android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/previoud"

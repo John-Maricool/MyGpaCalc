@@ -6,11 +6,11 @@
 
         <variable
             name="result"
-            type="com.example.johnbatista.mygpacalc.data.models.GpResultModel" />
+            type="com.maricool.johnbatista.mygpacalc.data.models.GpResultModel" />
 
         <variable
             name="viewModel"
-            type="com.example.johnbatista.mygpacalc.ui.show_gp.ShowGPViewModel" />
+            type="com.maricool.johnbatista.mygpacalc.ui.show_gp.ShowGPViewModel" />
     </data>
 
     <androidx.cardview.widget.CardView

@@ -7,7 +7,7 @@
 
         <variable
             name="viewModel"
-            type="com.example.johnbatista.mygpacalc.ui.add_course.AddCourseViewModel" />
+            type="com.maricool.johnbatista.mygpacalc.ui.add_course.AddCourseViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -19,14 +19,16 @@
         <androidx.appcompat.widget.AppCompatEditText
             android:id="@+id/course"
             android:layout_width="100dp"
-            android:layout_height="50dp"
+            android:layout_height="45dp"
             android:layout_margin="8dp"
             android:layout_marginTop="16dp"
             android:background="@drawable/rounded_corners"
             android:ems="8"
             android:hint="@string/course"
+            android:textSize="15sp"
             android:lines="1"
             android:text="@={viewModel.courseText}"
+            android:textColor="@color/white"
             app:layout_constraintEnd_toStartOf="@+id/ul"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
@@ -38,6 +40,7 @@
             android:layout_height="40dp"
             android:layout_margin="4dp"
             android:background="@drawable/rounded_corners"
+            android:elevation="6dp"
             android:entries="@array/ul"
             app:layout_constraintBottom_toBottomOf="@+id/course"
             app:layout_constraintEnd_toStartOf="@+id/grade"
@@ -53,6 +56,7 @@
             android:layout_height="40dp"
             android:layout_margin="8dp"
             android:background="@drawable/rounded_corners"
+            android:elevation="6dp"
             android:entries="@array/grades"
             android:hint="@string/course"
             app:layout_constraintBottom_toBottomOf="@+id/ul"
@@ -68,8 +72,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
+            android:textSize="15sp"
+            android:textAllCaps="false"
             android:layout_marginTop="36dp"
-            android:background="@color/fab_background"
+            android:background="@drawable/rounded_corners"
+            android:elevation="6dp"
             android:onClick="@{() -> viewModel.onButtonClick()}"
             android:textColor="@color/white"
             app:layout_constraintEnd_toEndOf="@+id/grade"

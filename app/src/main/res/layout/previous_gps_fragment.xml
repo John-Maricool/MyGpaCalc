@@ -7,12 +7,16 @@
 
         <variable
             name="viewModel"
-            type="com.example.johnbatista.mygpacalc.ui.previous_gps.PreviousGpsViewModel" />
+            type="com.maricool.johnbatista.mygpacalc.ui.previous_gps.PreviousGpsViewModel" />
 
         <variable
             name="adapter"
-            type="com.example.johnbatista.mygpacalc.data.adapter.PreviousGpListAdapter" />
+            type="com.maricool.johnbatista.mygpacalc.data.adapter.PreviousGpListAdapter" />
     </data>
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        app:on_refresh="@{() -> viewModel.getSavedGps()}"
+        android:layout_height="match_parent">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -33,4 +37,5 @@
             tools:listitem="@layout/previous_gp_list_item" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 </layout>

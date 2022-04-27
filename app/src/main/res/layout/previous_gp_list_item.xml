@@ -7,19 +7,19 @@
 
         <variable
             name="listener"
-            type="com.example.johnbatista.mygpacalc.data.interfaces.OnItemClickListener" />
+            type="com.maricool.johnbatista.mygpacalc.data.interfaces.OnItemClickListener" />
 
         <variable
             name="gpResult"
-            type="com.example.johnbatista.mygpacalc.data.models.GpResultModel" />
+            type="com.maricool.johnbatista.mygpacalc.data.models.GpResultModel" />
     </data>
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="2dp"
-        android:onLongClick="@{() -> listener.onItemLongClick(gpResult.name)}"
         android:onClick="@{() -> listener.onItemClick(gpResult.name)}"
+        android:onLongClick="@{() -> listener.onItemLongClick(gpResult.name)}"
         app:cardBackgroundColor="@color/fab_background"
         app:cardCornerRadius="5dp">
 
@@ -47,13 +47,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
+                android:text="@{gpResult.gp}"
                 android:textColor="@color/white"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="@+id/details"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/details"
-                android:text="@{gpResult.gp}"
                 tools:text="3.56" />
 
             <androidx.appcompat.widget.AppCompatTextView

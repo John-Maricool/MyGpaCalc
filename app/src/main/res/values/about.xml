@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="about_gp">
+                <![CDATA[
+        <h3>This application is a simple Grade Point Calculator that enables you calculate Grade Point semester by semester and save to be updated and accessed later on.</h3>
+<h3>The scale used in this application is a 5.0 scale.</h3>
+<h3>Grade Point ratings.</h3>
+<ul>
+    <li>
+        <h3> 4.5 to 5.0 is a first class.</h3>
+    </li>
+    <li>
+        <h3> 3.5 to 4.49 is a second class upper.</h3>
+    </li>
+    <li>
+        <h3> 2.5 to 3.49 is a second class lower.</h3>
+    </li>
+    <li>
+        <h3> 1.5 to 2.49 is a third class.</h3>
+    </li>
+    <li>
+        <h3> 0 to 1.49 is a pass degree.</h3>
+    </li>
+</ul>
+<h3>&nbsp;</h3>
+<h3>You can contact developer through ebukaikenwa0902@gmail.com</h3>
+]]>
+    </string>
+</resources>

@@ -6,11 +6,11 @@
 
         <variable
             name="viewModel"
-            type="com.example.johnbatista.mygpacalc.ui.calc_gp.CalcGpViewModel" />
+            type="com.maricool.johnbatista.mygpacalc.ui.calc_gp.CalcGpViewModel" />
 
         <variable
             name="adapter"
-            type="com.example.johnbatista.mygpacalc.data.adapter.CoursesListAdapter" />
+            type="com.maricool.johnbatista.mygpacalc.data.adapter.CoursesListAdapter" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

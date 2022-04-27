@@ -6,10 +6,10 @@
     <data>
         <variable
             name="listener"
-            type="com.example.johnbatista.mygpacalc.data.interfaces.OnCourseItemClickListener" />
+            type="com.maricool.johnbatista.mygpacalc.data.interfaces.OnCourseItemClickListener" />
         <variable
             name="Acourse"
-            type="com.example.johnbatista.mygpacalc.data.models.Course" />
+            type="com.maricool.johnbatista.mygpacalc.data.models.Course" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

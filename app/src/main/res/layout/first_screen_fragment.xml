@@ -7,7 +7,7 @@
 
         <variable
             name="viewModel"
-            type="com.example.johnbatista.mygpacalc.ui.create_gp.FirstScreenViewModel" />
+            type="com.maricool.johnbatista.mygpacalc.ui.create_gp.FirstScreenViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

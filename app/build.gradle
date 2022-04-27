@@ -11,7 +11,7 @@ android {
     compileSdk 31
 
     defaultConfig {
-        applicationId "com.example.johnbatista.mygpacalc"
+        applicationId "com.maricool.johnbatista.mygpacalc"
         minSdkVersion 23
         targetSdkVersion 31
         versionCode 1
