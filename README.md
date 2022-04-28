@@ -25,3 +25,12 @@ Basic Knowledge of Android Studio, Kotlin and Room Database
 - Download and open the project in Android Studio
 - Connect your Android phone or use the emulator to start the application
 ## Screeshots
+<img src="https://user-images.githubusercontent.com/60844538/165717341-5c857dbe-6fa0-4c27-aca5-54eaea7b2e92.png" width="250">
+<img src="https://user-images.githubusercontent.com/60844538/165717190-565d6282-a939-4ffa-9716-0aa47021e7ff.png" width="250">
+<img src="https://user-images.githubusercontent.com/60844538/165717221-a8f781e0-592e-4f2f-b6e0-033ed80dc780.png" width="250">
+<img src="https://user-images.githubusercontent.com/60844538/165717319-e2dda729-ffcf-4d8a-ba84-bbd8a5bcc3aa.png" width="250">
+<img src="https://user-images.githubusercontent.com/60844538/165717335-a1a54862-0e0c-40cb-91c3-662f3390b7a9.png" width="250">
+
+## App will soon be available on play store. 
+[Hire me on Upwork](https://www.upwork.com/freelancers/~01dc5db0cd3e184267)
+
