@@ -2,11 +2,13 @@ package com.maricool.johnbatista.mygpacalc.ui.first_screen
 
 import android.os.Bundle
 import android.view.View
+import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.maricool.johnbatista.mygpacalc.R
 import com.maricool.johnbatista.mygpacalc.databinding.IntroFragmentBinding
+import com.maricool.johnbatista.mygpacalc.ui.MainActivity
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -15,6 +17,21 @@ class IntroFragment : Fragment(R.layout.intro_fragment) {
     private var _binding: IntroFragmentBinding? = null
     private val binding: IntroFragmentBinding get() = _binding!!
     private val viewModel: IntroViewModel by viewModels()
+
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        val callback: OnBackPressedCallback =
+            object : OnBackPressedCallback(true) {
+                override fun handleOnBackPressed() {
+                    (activity as MainActivity).finish()
+                }
+            }
+        requireActivity().onBackPressedDispatcher.addCallback(
+            this,
+            callback
+        )
+    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

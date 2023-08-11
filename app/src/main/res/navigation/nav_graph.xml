@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph.xml"
-    app:startDestination="@id/introFragment">
+    app:startDestination="@id/splashScreenFragment">
 
     <fragment
         android:id="@+id/calcGpFragment"
@@ -111,5 +111,25 @@
             app:exitAnim="@anim/slide_out_left"
             app:popUpTo="@id/introFragment"
             app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/splashScreenFragment"
+        android:name="com.maricool.johnbatista.mygpacalc.ui.splash_screen.SplashScreenFragment"
+        android:label="fragment_splash_screen"
+        tools:layout="@layout/fragment_splash_screen" >
+        <action
+            android:id="@+id/action_splashScreenFragment_to_introFragment"
+            app:destination="@id/introFragment" />
+        <action
+            android:id="@+id/action_splashScreenFragment_to_enterInitialDetails"
+            app:destination="@id/enterInitialDetails" />
+    </fragment>
+    <fragment
+        android:id="@+id/enterInitialDetails"
+        android:name="com.maricool.johnbatista.mygpacalc.ui.splash_screen.EnterInitialDetails"
+        android:label="EnterInitialDetails" >
+        <action
+            android:id="@+id/action_enterInitialDetails_to_introFragment"
+            app:destination="@id/introFragment" />
     </fragment>
 </navigation>

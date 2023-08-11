@@ -6,7 +6,7 @@
             <item>
                 <shape>
                     <gradient
-                        android:startColor="#30933A"
+                        android:startColor="#09C81C"
                         android:endColor="@color/fab_background"
                         android:angle="270"/>
                     <stroke
