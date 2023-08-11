@@ -51,3 +51,4 @@ class IntroFragment : Fragment(R.layout.intro_fragment) {
         _binding = null
     }
 }
+

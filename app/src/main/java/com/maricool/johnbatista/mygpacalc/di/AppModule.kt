@@ -1,6 +1,7 @@
 package com.maricool.johnbatista.mygpacalc.di
 
 import android.content.Context
+import android.content.SharedPreferences
 import androidx.room.Room
 import com.maricool.johnbatista.mygpacalc.local_db.CourseDao
 import com.maricool.johnbatista.mygpacalc.local_db.CourseDatabase
@@ -30,5 +31,11 @@ object AppModule {
     @Singleton
     fun provideCourseDao(db: CourseDatabase): CourseDao {
         return db.courseDao()
+    }
+
+    @Provides
+    @Singleton
+    fun provideSharedPrefs(context: Context): SharedPreferences{
+        return context.getSharedPreferences("prefs", Context.MODE_PRIVATE)
     }
 }
