@@ -31,11 +31,10 @@ class MainActivity : AppCompatActivity() {
         super.onStart()
         navController.addOnDestinationChangedListener { _, destination, _ ->
             when (destination.id) {
-                R.id.introFragment, R.id.splashScreenFragment, R.id.enterInitialDetails -> toolbar.visibility = View.GONE
+                R.id.introFragment, R.id.splashScreenFragment, R.id.enterInitialDetails, R.id.firstScreenFragment -> toolbar.visibility = View.GONE
                 else -> toolbar.visibility = View.VISIBLE
             }
         }
-
     }
 
     override fun onSupportNavigateUp(): Boolean {

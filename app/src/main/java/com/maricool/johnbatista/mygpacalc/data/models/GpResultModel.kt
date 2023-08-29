@@ -1,7 +1,10 @@
 package com.maricool.johnbatista.mygpacalc.data.models
 
 import android.os.Parcelable
-import com.maricool.johnbatista.mygpacalc.utils.getComment
+import com.maricool.johnbatista.mygpacalc.utils.getComment4pt
+import com.maricool.johnbatista.mygpacalc.utils.getComment5pt
+import com.maricool.johnbatista.mygpacalc.utils.getGradeDigit4pt
+import com.maricool.johnbatista.mygpacalc.utils.getGradeDigit5Pt
 import kotlinx.parcelize.Parcelize
 
 @Parcelize
@@ -11,6 +14,12 @@ data class GpResultModel(
     val numOfCourses: Int,
     val totalUl: Int
 ) : Parcelable {
-    val comm: String
-        get() = getComment(gp)
+
+    fun getComment(type: Int): String{
+        return if(type == 5){
+            getComment5pt(gp)
+        }else{
+            getComment4pt(gp)
+        }
+    }
 }

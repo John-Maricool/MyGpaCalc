@@ -7,21 +7,24 @@ import androidx.recyclerview.widget.RecyclerView
 import com.maricool.johnbatista.mygpacalc.R
 import com.maricool.johnbatista.mygpacalc.data.interfaces.OnCourseItemClickListener
 import com.maricool.johnbatista.mygpacalc.data.models.Course
+import com.maricool.johnbatista.mygpacalc.data.prefs.SharedPrefs
 import com.maricool.johnbatista.mygpacalc.databinding.GpCoursesListItemBinding
 import javax.inject.Inject
 
 class CoursesListAdapter
-@Inject constructor() : RecyclerView.Adapter<CoursesListAdapter.CourseListViewHolder>() {
+@Inject constructor(val prefs: SharedPrefs) : RecyclerView.Adapter<CoursesListAdapter.CourseListViewHolder>() {
 
     private var courses = listOf<Course>()
     lateinit var listener: OnCourseItemClickListener
 
     inner class CourseListViewHolder(private val binding: GpCoursesListItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
+        val type = prefs.getGradePoint()
 
         fun bind(course: Course) {
             binding.acourse = course
             binding.listener = listener
+            binding.gadeUnit.text = course.getGradeDigit(type).toString()
         }
     }
 
@@ -61,9 +64,10 @@ class CoursesListAdapter
     }
 
     fun getMultiFactor(): Float {
+        val type = prefs.getGradePoint()
         var fac = 0.0
         courses.forEach {
-            fac += (it.gradeDigit * it.unitLoad)
+            fac += (it.getGradeDigit(type) * it.unitLoad)
         }
         return fac.toFloat()
     }

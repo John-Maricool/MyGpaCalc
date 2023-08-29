@@ -93,12 +93,14 @@
             app:popUpTo="@id/previousGpsFragment"
             app:popUpToInclusive="true" />
         <action
+            android:id="@+id/action_introFragment_to_calcGpFragment"
+            app:destination="@id/calcGpFragment" />
+        <action
             android:id="@+id/action_introFragment_to_aboutFragment"
-            app:destination="@id/aboutFragment"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left"
-            app:popUpTo="@id/aboutFragment"
-            app:popUpToInclusive="true" />
+            app:destination="@id/aboutFragment" />
+        <action
+            android:id="@+id/action_introFragment_to_firstScreenFragment"
+            app:destination="@id/firstScreenFragment" />
     </fragment>
     <fragment
         android:id="@+id/aboutFragment"

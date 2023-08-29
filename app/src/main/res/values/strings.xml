@@ -61,7 +61,7 @@
     <string name="grade_unit">Grade Unit</string>
     <string name="number_of_courses">Number of Courses</string>
     <string name="nuber_of_unit_loads">Total Unit Loads</string>
-    <string name="previously_saved_gps">Previously Saved GPs</string>
+    <string name="previously_saved_gps"> Saved Results</string>
     <string name="calc_new">Calculate New</string>
     <string name="create_new">Create New</string>
     <string name="delete_all">Delete All</string>

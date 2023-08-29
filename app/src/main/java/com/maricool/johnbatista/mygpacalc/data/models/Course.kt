@@ -1,7 +1,8 @@
 package com.maricool.johnbatista.mygpacalc.data.models
 
 import android.os.Parcelable
-import com.maricool.johnbatista.mygpacalc.utils.getGradeDigit
+import com.maricool.johnbatista.mygpacalc.utils.getGradeDigit4pt
+import com.maricool.johnbatista.mygpacalc.utils.getGradeDigit5Pt
 import kotlinx.parcelize.Parcelize
 
 @Parcelize
@@ -11,6 +12,13 @@ data class Course(
     val unitLoad: Int = 0,
     val grade: String
 ) : Parcelable {
-    val gradeDigit: Float
-        get() = getGradeDigit(grade)
+
+    fun getGradeDigit(type: Int): Float{
+        return if(type == 5){
+            getGradeDigit5Pt(grade)
+        }else{
+            getGradeDigit4pt(grade)
+        }
+    }
+
 }

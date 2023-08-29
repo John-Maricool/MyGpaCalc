@@ -10,6 +10,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.maricool.johnbatista.mygpacalc.R
 import com.maricool.johnbatista.mygpacalc.databinding.AddCourseFragmentBinding
+import com.maricool.johnbatista.mygpacalc.ui.MainActivity
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -54,6 +55,7 @@ class AddCourseFragment : Fragment(R.layout.add_course_fragment) {
         viewModel.added.observe(viewLifecycleOwner) {
             if (it != null)
                 Toast.makeText(activity, "Added", Toast.LENGTH_SHORT).show()
+            (activity as MainActivity).onBackPressed()
         }
     }
 

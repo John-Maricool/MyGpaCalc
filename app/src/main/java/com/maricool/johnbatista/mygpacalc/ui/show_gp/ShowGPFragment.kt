@@ -7,8 +7,10 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.maricool.johnbatista.mygpacalc.R
+import com.maricool.johnbatista.mygpacalc.data.prefs.SharedPrefs
 import com.maricool.johnbatista.mygpacalc.databinding.FragmentShowGpBinding
 import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
 @AndroidEntryPoint
 class ShowGPFragment : DialogFragment(R.layout.fragment_show_gp) {
@@ -18,6 +20,9 @@ class ShowGPFragment : DialogFragment(R.layout.fragment_show_gp) {
     private val viewModel: ShowGPViewModel by viewModels()
 
     private val args: ShowGPFragmentArgs by navArgs()
+
+    @Inject
+    lateinit var prefs: SharedPrefs
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -29,12 +34,17 @@ class ShowGPFragment : DialogFragment(R.layout.fragment_show_gp) {
         binding.lifecycleOwner = this.viewLifecycleOwner
         binding.executePendingBindings()
         observeLiveData()
+
+        val type = prefs.getGradePoint()
+
+        val comment = args.result.getComment(type)
+
+        binding.commen.text = comment
     }
 
 
     private fun observeLiveData() {
         binding.close.setOnClickListener {
-            // isCancelable = true
             dismiss()
         }
         viewModel.navToAllGp.observe(viewLifecycleOwner) {

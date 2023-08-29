@@ -17,14 +17,15 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="2dp"
-        android:onClick="@{() -> listener.onItemClick(gpResult.name)}"
-        android:onLongClick="@{() -> listener.onItemLongClick(gpResult.name)}"
-        app:cardBackgroundColor="@color/fab_background"
-        app:cardCornerRadius="5dp">
+        app:cardCornerRadius="2dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
+            android:layout_margin="2dp"
+            android:padding="5dp"
+            android:onClick="@{() -> listener.onItemClick(gpResult.name)}"
+            android:onLongClick="@{() -> listener.onItemLongClick(gpResult.name)}"
+            android:background="@drawable/rounded_bg2"
             android:layout_height="wrap_content">
 
             <androidx.appcompat.widget.AppCompatTextView
@@ -34,7 +35,7 @@
                 android:layout_margin="8dp"
                 android:layout_marginEnd="8dp"
                 android:text="@{gpResult.name}"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toStartOf="@+id/gp"
@@ -48,7 +49,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
                 android:text="@{gpResult.gp}"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="@+id/details"
@@ -63,7 +64,7 @@
                 android:layout_margin="8dp"
                 android:layout_marginEnd="8dp"
                 android:text="@string/number_of_courses"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toStartOf="@+id/gp"
                 app:layout_constraintStart_toStartOf="parent"
@@ -74,7 +75,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="@+id/tot_courses"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -89,7 +90,7 @@
                 android:layout_margin="8dp"
                 android:layout_marginEnd="8dp"
                 android:text="@string/nuber_of_unit_loads"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toStartOf="@+id/ul_no"
                 app:layout_constraintStart_toStartOf="parent"
@@ -100,7 +101,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="@+id/tot_ul"
                 app:layout_constraintEnd_toEndOf="parent"

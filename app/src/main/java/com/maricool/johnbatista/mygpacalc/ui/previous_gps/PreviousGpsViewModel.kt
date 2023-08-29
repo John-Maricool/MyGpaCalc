@@ -5,7 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.maricool.johnbatista.mygpacalc.data.models.GpResultModel
-import com.maricool.johnbatista.mygpacalc.data.repository.PreviousGpsRepository
+import com.maricool.johnbatista.mygpacalc.data.repository.RetriveGpDetailsRepo
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers.Main
 import kotlinx.coroutines.async
@@ -14,7 +14,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class PreviousGpsViewModel
-@Inject constructor(val repo: PreviousGpsRepository) : ViewModel() {
+@Inject constructor(val repo: RetriveGpDetailsRepo) : ViewModel() {
 
     private val _result = MutableLiveData<List<GpResultModel>>()
     val result: LiveData<List<GpResultModel>> get() = _result
