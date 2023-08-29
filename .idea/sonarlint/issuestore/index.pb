@@ -19,8 +19,6 @@ Xapp/src/main/java/com/maricool/johnbatista/mygpacalc/data/repository/CalcGpRepo
 [app/src/main/java/com/maricool/johnbatista/mygpacalc/data/repository/AddCourseRepository.kt,7\6\76fcb3bbd84508e04476b0f30c049c22cd8aa464
 
 Oapp/src/main/java/com/maricool/johnbatista/mygpacalc/local_db/CourseDatabase.kt,2\b\2b77d5821ba817b38c3820c160eff3311a80e579
-z
-Japp/src/main/java/com/maricool/johnbatista/mygpacalc/local_db/CourseDao.kt,0\b\0b4056348d77edfc21770c8515dece9b27a50bb2
 P
  app/src/main/AndroidManifest.xml,8\c\8c55c3ccc257e5907959013f99656e4c8ec3903e
 w
@@ -29,8 +27,6 @@ w
 Gapp/src/main/java/com/maricool/johnbatista/mygpacalc/utils/Constants.kt,4\d\4db1f0c91b134530683419077afe0ce41fcd68c4
 t
 Dapp/src/main/java/com/maricool/johnbatista/mygpacalc/di/AppModule.kt,a\e\aed02d3a9035e730aca3bfddbe615faac44338b8
-å
-\app/src/main/java/com/maricool/johnbatista/mygpacalc/ui/splash_screen/EnterInitialDetails.kt,2\4\248210b6570a2186303f322b9daa0cddd0f4de2b
 ç
 ]app/src/main/java/com/maricool/johnbatista/mygpacalc/ui/splash_screen/SplashScreenFragment.kt,d\e\de69aaaabe5c323395f28aa608cd56cae6a8d1bc
 ~
@@ -45,14 +41,10 @@ w
 Gapp/src/main/java/com/maricool/johnbatista/mygpacalc/ui/MainActivity.kt,a\d\ade1ccb85e592708d62b6a8e76c483d8f2fb9f22
 Ä
 Papp/src/androidTest/java/com/maricool/johnbatista/mygpacalc/ApplicationTest.java,7\3\73f49c2f499596fc0f2a808ff6959af56e2f262c
-Ö
-Uapp/src/main/java/com/maricool/johnbatista/mygpacalc/ui/first_screen/IntroFragment.kt,d\3\d3a29a18149341ca0301842b2d0eeeef58b17f1a
 à
 Xapp/src/main/java/com/maricool/johnbatista/mygpacalc/ui/create_gp/FirstScreenFragment.kt,0\b\0b87bacefb35e46ddd4922e49a54409e8961cbcc
 à
 Xapp/src/main/java/com/maricool/johnbatista/mygpacalc/ui/add_course/AddCourseViewModel.kt,c\0\c0d84cc628110ca2a6e3580497f25209769b98a5
-
-Oapp/src/main/java/com/maricool/johnbatista/mygpacalc/data/prefs/shared_prefs.kt,7\a\7ae989dd2ae70a7423ca9c9b2cfec2cda1e3c502
 Å
 Qapp/src/main/java/com/maricool/johnbatista/mygpacalc/ui/calc_gp/CalcGpFragment.kt,2\e\2ef84b8dd7f58818b93a86d822882aee3ff33d2b
 á
@@ -71,3 +63,13 @@ Japp/src/main/java/com/maricool/johnbatista/mygpacalc/utils/Calculations.kt,a\5
 Rapp/src/main/java/com/maricool/johnbatista/mygpacalc/ui/show_gp/ShowGPViewModel.kt,f\a\fa560c2f835cc2fd1bb758e9aa6ef508189ec4d5
 á
 Wapp/src/main/java/com/maricool/johnbatista/mygpacalc/data/adapter/CoursesListAdapter.kt,9\0\90c1bae97b67618b175399b54332986867a37560
+Ü
+Vapp/src/main/java/com/maricool/johnbatista/mygpacalc/ui/first_screen/IntroViewModel.kt,9\e\9e74d99b614311b7dedd32b19a0cbd9cb3e8364d
+å
+\app/src/main/java/com/maricool/johnbatista/mygpacalc/ui/splash_screen/EnterInitialDetails.kt,2\4\248210b6570a2186303f322b9daa0cddd0f4de2b
+Å
+Qapp/src/main/java/com/maricool/johnbatista/mygpacalc/ui/show_gp/ShowGPFragment.kt,5\a\5a8282fcc6626037966d4358b3368c1ded4e2389
+z
+Japp/src/main/java/com/maricool/johnbatista/mygpacalc/local_db/CourseDao.kt,0\b\0b4056348d77edfc21770c8515dece9b27a50bb2
+
+Oapp/src/main/java/com/maricool/johnbatista/mygpacalc/data/prefs/shared_prefs.kt,7\a\7ae989dd2ae70a7423ca9c9b2cfec2cda1e3c502

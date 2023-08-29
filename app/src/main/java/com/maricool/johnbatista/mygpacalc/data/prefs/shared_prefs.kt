@@ -15,6 +15,9 @@ class SharedPrefs
             prefs.edit().putBoolean(Constants.isFirstTime, status).apply()
         }
 
+        fun resetData(){
+            prefs.edit().clear().apply()
+        }
         fun setUserName(name: String){
             prefs.edit().putString(Constants.username, name).apply()
         }

@@ -101,6 +101,9 @@
         <action
             android:id="@+id/action_introFragment_to_firstScreenFragment"
             app:destination="@id/firstScreenFragment" />
+        <action
+            android:id="@+id/action_introFragment_to_pointDialogFragment"
+            app:destination="@id/pointDialogFragment" />
     </fragment>
     <fragment
         android:id="@+id/aboutFragment"
@@ -134,4 +137,8 @@
             android:id="@+id/action_enterInitialDetails_to_introFragment"
             app:destination="@id/introFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/pointDialogFragment"
+        android:name="PointDialogFragment"
+        android:label="PointDialogFragment" />
 </navigation>
